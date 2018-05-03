@@ -17,12 +17,18 @@ public class CList <E> {
 		Node newNode = new Node(newItem, null);  // 새 노드 생성
 		if  (last == null) {      
 			//  1. 리스트가 empty일때
+			// (1) 새 노드를 last에 지정 
+			last = newNode;
 			
+			// (2) 새 노드의 next를 새 노드(자신) 지정
+			newNode.setNext(last);
 			
 		}
 		else {		
 			// 2. 리스트가 empty 아닐때
-			
+			//(1) 새노드의 next에 last의 next를 지정 
+			newNode.setNext(last.getNext());
+			last.setNext(newNode);
 			
 		}
 		size++;

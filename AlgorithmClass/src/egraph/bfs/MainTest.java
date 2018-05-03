@@ -11,7 +11,7 @@ public class MainTest {
 			Edge e2 = new Edge(2); adjList[0].add(e2);
 			Edge e1 = new Edge(1); adjList[0].add(e1);
 			
-		adjList[1] = new LinkedList<>(); 
+		adjList[1] = new LinkedList<>(); //1번째
 			Edge e4 = new Edge(3); adjList[1].add(e4);
 			Edge e3 = new Edge(0); adjList[1].add(e3);
 			
@@ -42,6 +42,15 @@ public class MainTest {
 		adjList[9] = new LinkedList<>(); Edge e20 = new Edge(3); adjList[9].add(e20);
 		
 
+		for(int i=0;i<N;i++){
+			
+		}
+		System.out.println("넓이우선탐색");
+		BFS bfs = new BFS(adjList);
+		
+		
+		
+		
 		
 	}
 }

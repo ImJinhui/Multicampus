@@ -1,6 +1,8 @@
 package egraph.bfs;
 
 import java.util.*;
+
+import egraph.dfs.DFS;
 public class BFS {
 	int N;  // 그래프 정점의 수
 	List<Edge>[] graph;
@@ -16,7 +18,20 @@ public class BFS {
 	
 	//*****************************************************
 	private void bfs(int i) {
-		
+		Queue<Integer> queue = new LinkedList<Integer>();
+		visited[i] = true;
+		queue.add(i);
+		while(!queue.isEmpty()){
+			int j = queue.remove();
+			System.out.print(j+" ");
+			//연결된 정점을 찾기
+			for(Edge e:graph[j]){
+				if(!visited[e.adjvertex]){
+					visited[e.adjvertex] = true;
+					queue.add(e.adjvertex);
+				}
+			}
+		}
 		
 		
 		

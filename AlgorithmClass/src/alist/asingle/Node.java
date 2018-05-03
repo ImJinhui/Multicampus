@@ -1,5 +1,5 @@
 package alist.asingle;
-public class Node  <E extends Comparable<E>>{
+public class Node  <E>{
 	private E    item;
 	private Node next;
 	

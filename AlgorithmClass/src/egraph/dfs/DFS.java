@@ -1,6 +1,8 @@
 package egraph.dfs;
 
 import java.util.List;
+
+import egraph.bfs.Edge;
 public class DFS {
 	int N;	 // 그래프 정점의 수
 	List<Edge>[] graph;
@@ -16,7 +18,13 @@ public class DFS {
 	
 	//*************************************************
 	private void dfs(int i) {
-		
+		visited[i] = true;
+		System.out.print(i + " ");
+		for (Edge e : graph[i]) {
+			if (!visited[e.adjvertex]) {
+				dfs(e.adjvertex);
+			}
+		}
 		
 		
 		
